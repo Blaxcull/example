@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change URL on Button Click</title>
+</head>
+<body>
+    <h1>Click the Button to Change the URL</h1>
+    <button id="clickButton">Click Me</button>
+
+    <script>
+        // Get the button element
+        const button = document.getElementById('clickButton');
+
+        // Add a click event listener to the button
+        button.addEventListener('click', () => {
+            // Change the URL to /clicked without reloading the page
+            history.pushState(null, null, '/clicked');
+            console.log('URL changed to /clicked');
+        });
+    </script>
+</body>
+</html>
